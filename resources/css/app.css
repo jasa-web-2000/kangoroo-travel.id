@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .__container {
+        @apply w-full max-w-[1240px] px-5 sm:px-20 md:px-5 mx-auto;
+    }
+
+    .__gradient {
+        @apply bg-gradient-to-tl from-blue-900 via-blue-700 to-blue-600 from-10% via-80% to-95%;
+    }
+
+    #content {
+        & h2 {
+            @apply my-2;
+        }
+        & h3.list-agent {
+            @apply bg-slate-200 pl-5 py-3 mb-5 mt-10 border-l-4 border-blue-600;
+        }
+        & h2,
+        & h3 {
+            @apply text-left font-bold;
+        }
+        & p {
+            @apply mb-3;
+        }
+        & a {
+            @apply text-blue-600 underline;
+        }
+        & img {
+            @apply rounded mb-5;
+        }
+        & ul {
+            @apply list-disc ms-6 mb-4;
+        }
+        & table {
+            @apply !text-left;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-medium !leading-[2.5rem] md:!leading-[3rem] xl:!leading-[3.5rem];
+    }
+    h1 {
+        @apply text-[30px] md:text-[40px] xl:text-[50px] font-black;
+    }
+    h2 {
+        @apply !text-[21px] font-black;
+    }
+    h3 {
+        @apply text-[18px] font-medium;
+    }
+    p {
+        @apply leading-normal tracking-[0.005em];
+    }
+}
