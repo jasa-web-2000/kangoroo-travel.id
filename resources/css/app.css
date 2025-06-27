@@ -8,7 +8,7 @@
     }
 
     .__gradient {
-        @apply bg-gradient-to-tl from-blue-900 via-blue-700 to-blue-600 from-10% via-80% to-95%;
+        @apply bg-gradient-to-tl from-yellow-600 via-yellow-500 to-yellow-400 from-10% via-80% to-95%;
     }
 
     #content {
@@ -16,7 +16,7 @@
             @apply my-2;
         }
         & h3.list-agent {
-            @apply bg-slate-200 pl-5 py-3 mb-5 mt-10 border-l-4 border-blue-600;
+            @apply bg-slate-200 pl-5 py-3 mb-5 mt-10 border-l-4 border-yellow-600;
         }
         & h2,
         & h3 {
@@ -26,7 +26,7 @@
             @apply mb-3;
         }
         & a {
-            @apply text-blue-600 underline;
+            @apply text-yellow-600 underline;
         }
         & img {
             @apply rounded mb-5;

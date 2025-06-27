@@ -1,4 +1,4 @@
-<div class="bg-white py-3 md:py-5 border-b z-[100] relative">
+<div class="bg-white py-2 border-b z-[100] relative">
     <div class="__container">
         <div class="grid grid-cols-12 gap-5">
             <div class="col-span-4">

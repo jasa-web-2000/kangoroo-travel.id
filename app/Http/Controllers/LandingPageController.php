@@ -199,7 +199,7 @@ class LandingPageController extends Controller
     {
         return view('pages.arsip-travel', [
             'title' => "Arsip Travel Termurah " . date('Y'),
-            'desc' => "Arsip Travel Termurah dan Terbaik No. 1 di Indonesia",
+            'desc' => config('app.name') . " Menawarkan Travel Termurah dan Terbaik No. 1 di Pulau Sumatera, Jawa, dan Bali",
             'featured' => array_chunk($this->featured, 2),
         ]);
     }

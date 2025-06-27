@@ -5,5 +5,5 @@
     <x-layouts.home.featured :featured="$featured" />
     <x-layouts.gallery />
     <x-layouts.cta />
-    <x-layouts.home.agent :agent="$agent" />
+    <x-layouts.home.testimonials />
 @endsection

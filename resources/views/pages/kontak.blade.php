@@ -9,7 +9,7 @@
             @method('POST')
             @csrf
             <div
-                class="grid grid-cols-1 !gap-x-5 !gap-y-4 [&_p]:text-sm [&_p]:text-slate-600 [&_p]:font-semibold [&_label]:inline [&_label]:text-sm [&_label]:font-medium [&_label]:cursor-pointer [&>div>div]:mt-1 [&_input]:w-full [&_input]:border [&_input]:cursor-pointer [&_input]:text-sm [&_input]:border-slate-300 [&_input]:p-2 [&_input]:rounded focus:[&_input]:border-blue-700 focus:[&_input]:outline-blue-700">
+                class="grid grid-cols-1 !gap-x-5 !gap-y-4 [&_p]:text-sm [&_p]:text-slate-600 [&_p]:font-semibold [&_label]:inline [&_label]:text-sm [&_label]:font-medium [&_label]:cursor-pointer [&>div>div]:mt-1 [&_input]:w-full [&_input]:border [&_input]:cursor-pointer [&_input]:text-sm [&_input]:border-slate-300 [&_input]:p-2 [&_input]:rounded focus:[&_input]:border-yellow-700 focus:[&_input]:outline-yellow-700">
                 {{-- Nama --}}
                 <div>
                     <label for="nama" class="">Nama Pemesan</label>
@@ -55,7 +55,7 @@
                     <label for="catatan" class="">Catatan / Bawaan</label>
                     <div class="">
                         <textarea required id="catatan" rows="3"
-                            class="w-full border cursor-pointer text-sm border-slate-300 p-2 rounded focus:border-blue-700 focus:outline-blue-700"></textarea>
+                            class="w-full border cursor-pointer text-sm border-slate-300 p-2 rounded focus:border-yellow-700 focus:outline-yellow-700"></textarea>
                     </div>
                 </div>
             </div>

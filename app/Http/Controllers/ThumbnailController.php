@@ -20,12 +20,13 @@ class ThumbnailController extends Controller
 
         foreach ($lines as $key => $item) {
             $image->text($item, [
-                'color' => 'white',
-                'size' => 100,
-                'yOffset' => -350 + ($key * 120),
+                'color' => '#fff',
+                'size' => 90,
+                'yOffset' => -150 + ($key * 120),
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
+
         $imageData = $image->toDataUri(null, 15);
 
         return response()->make(file_get_contents($imageData), 200, [

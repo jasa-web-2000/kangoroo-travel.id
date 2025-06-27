@@ -25,7 +25,7 @@ class JawaBaliSeeder extends Seeder
             DistrictsSeeder::class,
         ]);
 
-        $provinceCode = [13, 16, 17, 18, 31, 32, 33, 34, 35, 36, 51];
+        $provinceCode = [13, 14, 15, 16, 17, 18, 31, 32, 33, 34, 35, 36, 51];
 
         $cityCode = DB::table('indonesia_cities')
             ->whereIn('province_code', $provinceCode)

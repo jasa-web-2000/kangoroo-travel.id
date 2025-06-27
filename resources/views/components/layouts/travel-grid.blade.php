@@ -16,8 +16,7 @@
                 <a title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}"
                     href="{{ route('jalur-rute-travel', ['asal' => Str::slug($item[0]['name']), 'tujuan' => Str::slug($item[1]['name']), 'asalId' => $item[0]['code'], 'tujuanId' => $item[1]['code']]) }}"
                     target="__blank"
-                    class="bg-blue-600 hover:bg-blue-900 text-slate-300 px-5 py-2 text-sm line-clamp-2 !leading-5 text-center font-bold">Cek
-                    Detail</a>
+                    class="bg-yellow-100 hover:bg-yellow-400 text-slate-600 hover:text-slate-100 px-5 py-2 text-sm line-clamp-2 !leading-5 text-center font-bold">Detail Travel</a>
             </div>
         @endforeach
     </div>

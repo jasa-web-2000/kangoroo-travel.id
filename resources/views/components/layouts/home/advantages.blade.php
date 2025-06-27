@@ -4,7 +4,7 @@
             desc2="Apakah Anda siap untuk menjadi pelanggan kami dan mendapatkan banyak promo menarik?" />
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl
-                class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 [&_dt>div]:hover:[&_div]:!bg-blue-800 [&_dt>div]:hover:[&_div]:transition-[all_1s] [&_dt>div]:hover:[&_div]:rotate-12  [&>div]:relative [&>div]:pl-16 [&_dt]:text-base [&_dt]:font-semibold [&_dt]:leading-7 [&_dt]:text-gray-900 [&_dd]:mt-2 [&_dd]:text-base [&_dd]:leading-7 [&_dd]:text-gray-600 [&_dt>div]:absolute [&_dt>div]:left-0 [&_dt>div]:top-0 [&_dt>div]:flex [&_dt>div]:h-10 [&_dt>div]:w-10 [&_dt>div]:items-center [&_dt>div]:justify-center [&_dt>div]:rounded-lg [&_dt>div]:bg-blue-600 [&_svg]:h-6 [&_svg]:w-6 [&_svg]:text-white">
+                class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 [&_dt>div]:hover:[&_div]:!bg-yellow-800 [&_dt>div]:hover:[&_div]:transition-[all_1s] [&_dt>div]:hover:[&_div]:rotate-12  [&>div]:relative [&>div]:pl-16 [&_dt]:text-base [&_dt]:font-semibold [&_dt]:leading-7 [&_dt]:text-gray-900 [&_dd]:mt-2 [&_dd]:text-base [&_dd]:leading-7 [&_dd]:text-gray-600 [&_dt>div]:absolute [&_dt>div]:left-0 [&_dt>div]:top-0 [&_dt>div]:flex [&_dt>div]:h-10 [&_dt>div]:w-10 [&_dt>div]:items-center [&_dt>div]:justify-center [&_dt>div]:rounded-lg [&_dt>div]:bg-yellow-600 [&_svg]:h-6 [&_svg]:w-6 [&_svg]:text-white">
 
                 <div>
                     <dt>
@@ -16,10 +16,10 @@
                                 </path>
                             </svg>
                         </div>
-                        Dukungan Penuh
+                        Admin Support Online
                     </dt>
                     <dd>
-                        Kami menyediakan pelatihan dan dukungan penuh untuk memastikan Anda sukses.
+                        Untuk pemesanan bisa secara online melalui whatsapp, admin kami siap membantu anda 24 jam.
                     </dd>
                 </div>
 
@@ -33,11 +33,10 @@
                                 </path>
                             </svg>
                         </div>
-                        Pendapatan Menjanjikan
+                        Harga Murah
                     </dt>
                     <dd>
-                        Sebagai mitra, Anda memiliki kesempatan untuk meraih pendapatan yang menarik dengan memasarkan
-                        paket kami.
+                        Kami menawarkan travel atau carter dengan harga murah dan terjangkau, bahkan anda bisa negosiasi. 
                     </dd>
                 </div>
 
@@ -53,10 +52,10 @@
                                 <circle cx="12" cy="12" r="2"></circle>
                             </svg>
                         </div>
-                        Jarigan Luas
+                        Rute Lengkap
                     </dt>
                     <dd>
-                        Bergabung dengan kami berarti menjadi bagian dari jaringan agen tour umroh yang terpercaya.
+                        Anda bisa merencanakan perjalanan kemana saja dan kapan saja, kami menjangkau seluruh daerah di Sumatera, Jawa, dan Bali.
                     </dd>
                 </div>
 
@@ -71,12 +70,10 @@
                                 </path>
                             </svg>
                         </div>
-                        Berkah Ibadah
+                        Dijamin Puas
                     </dt>
                     <dd>
-                        Membantu saudara-saudara kita untuk melaksanakan ibadah umroh adalah amal jariyah yang terus
-                        mengalir.
-
+                        Kami selalu mengutamakan kepuasan pelanggan, baik ketika melakukan perjalanan maupun ketika melakukan pemesanan tiket.
                     </dd>
                 </div>
             </dl>

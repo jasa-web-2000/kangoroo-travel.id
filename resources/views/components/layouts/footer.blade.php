@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="__container pt-20 text-slate-300">
+        <div class="__container pt-20 text-slate-100">
             <div class="grid grid-cols-8 gap-x-5 gap-y-7">
                 <div class="col-span-12 md:col-span-4">
                     <x-logo :light="true" />
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="text-center py-5 mt-10 text-sm border-t border-blue-400">
+            <div class="text-center py-5 mt-10 text-sm border-t border-yellow-400">
                 Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex"
                     href="https://{{ developer() }}">{{ developer() }}</a><br>Juni 2025 - {{ \Carbon\Carbon::now()->locale('id')->isoFormat('MMMM YYYY') }}
             </div>

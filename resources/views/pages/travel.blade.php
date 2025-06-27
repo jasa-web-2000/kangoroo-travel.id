@@ -180,13 +180,9 @@
             {{-- H2 --}}
             <h2>Rekomendasi Agen {{ $page }}</h2>
             <p>
-                Apakah anda sedang mencari agen <a
-                    href="{{ route('agen-travel', ['asal' => Str::slug($travel[0]->name), 'asalId' => $travel[0]->code]) }}">
-                    {{ Str::title('Travel ' . $travel[0]->name) }}</a>
-                dan agen
-                <a
-                    href="{{ route('agen-travel', ['asal' => Str::slug($travel[1]->name), 'asalId' => $travel[1]->code]) }}">
-                    {{ Str::title('Travel ' . $travel[1]->name) }}</a> terbaik di Indonesia. Jangan khawatir! Kami akan
+                Apakah anda sedang mencari agen {{ Str::title('Travel ' . $travel[0]->name) }}
+                atau agen
+                {{ Str::title('Travel ' . $travel[1]->name) }} terbaik di Indonesia. Jangan khawatir! Kami akan
                 siap membantu anda mencari agen travel terpercaya. Siap mengantar anda dengan selamat.
             </p>
             <p>
@@ -242,6 +238,12 @@
             </ul>
             {{-- H2 --}}
             <h2>Kesimpulan</h2>
+            <iframe class="w-full h-auto aspect-video mb-3"
+                src="https://www.youtube.com/embed/JkQtbMABGUo?si=Yjw3V54n_MqENcZ9&autoplay=1" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
             <p>
                 Kami menawarkan anda jasa travel murah dengan banyak kelebihan, seperti harga murah dan fasilitas
                 menarik.
