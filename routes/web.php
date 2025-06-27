@@ -32,23 +32,23 @@ Route::controller(LandingPageController::class)->group(function () {
         return "Artisan optimize:clear berhasil dijalankan!";
     });
 
-    Route::prefix('/migrate-fresh')->group(function () {
+    // Route::prefix('/migrate-fresh')->group(function () {
 
-        Route::get('/', function () {
-            Artisan::call('migrate:fresh');
-            return "Artisan migrate:fresh berhasil dijalankan!";
-        });
+    //     Route::get('/', function () {
+    //         Artisan::call('migrate:fresh');
+    //         return "Artisan migrate:fresh berhasil dijalankan!";
+    //     });
 
-        Route::get('/seeder', function () {
-            Artisan::call('migrate:fresh --seed');
-            return "Artisan migrate:fresh --seed berhasil dijalankan!";
-        });
+    //     Route::get('/seeder', function () {
+    //         Artisan::call('migrate:fresh --seed');
+    //         return "Artisan migrate:fresh --seed berhasil dijalankan!";
+    //     });
 
-        Route::get('/sumatera-jawa-bali-seeder', function () {
-            Artisan::call('migrate:fresh --seed --seeder=JawaBaliSeeder');
-            return "Artisan migrate:fresh --seed --seeder=JawaBaliSeeder berhasil dijalankan!";
-        });
-    });
+    //     Route::get('/sumatera-jawa-bali-seeder', function () {
+    //         Artisan::call('migrate:fresh --seed --seeder=JawaBaliSeeder');
+    //         return "Artisan migrate:fresh --seed --seeder=JawaBaliSeeder berhasil dijalankan!";
+    //     });
+    // });
 
 
     Route::get('/', 'beranda')->name('beranda');
