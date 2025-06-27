@@ -151,8 +151,8 @@ class LandingPageController extends Controller
 
         return view('pages.travel', [
             'page' => $page,
-            'title' => Str::title("$page Murah " . date('Y')),
-            'desc' => Str::title("Jasa $page PP Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah dan terjangkau"),
+            'title' => Str::title("$page Terpercaya " . date('Y')),
+            'desc' => Str::title("Jasa $page Hari Ini dengan Jadwal 24 Jam, Harga Terjangkau, Bonus Makan, dan Via Tol"),
             'travel' => [$asalRes, $tujuanRes],
             'recommendation' => $recommendation,
             'thumbnail' => route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($asalRes['name']), 'tujuan' => Str::slug($tujuanRes['name']), 'asalId' => $asalRes['code'], 'tujuanId' => $tujuanRes['code']]),

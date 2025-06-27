@@ -7,9 +7,9 @@
             <div class="col-span-8 flex justify-end items-center">
                 <div class="md:hidden">
                     <div id="mobile-menu-toggle"
-                        class="group border border-blue-700 rounded p-1.5 transition-all hover:bg-blue-600 hover:cursor-pointer">
+                        class="group border border-yellow-700 rounded p-1.5 transition-all hover:bg-yellow-600 hover:cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 stroke-blue-700 group-hover:stroke-blue-100">
+                            stroke="currentColor" class="size-6 stroke-yellow-700 group-hover:stroke-yellow-100">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>

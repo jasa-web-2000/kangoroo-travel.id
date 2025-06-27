@@ -41,9 +41,11 @@ class SitemapController extends Controller
         $data = [
             route('beranda'),
             route('arsip-travel'),
-            route('arsip-agen'),
             route('travel-sitemap'),
-            route('agen-sitemap'),
+            route('galeri'),
+            route('kontak'),
+            // route('arsip-agen'),
+            // route('agen-sitemap'),
         ];
 
         return $this->xml($data);

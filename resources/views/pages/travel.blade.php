@@ -9,46 +9,41 @@
             <h2>{{ $title }}</h2>
             <img src="{{ $thumbnail }}" alt="{{ $title }}">
             <p>
-                <a href="{{ route('beranda') }}">{{ Str::upper(env('APP_NAME')) }}</a> kini hadir untuk membantu
-                perjalanan
-                travel anda
-                dan keluarga. Kami siap antar jemput anda dari
-                {{ Str::title($travel[0]->name) }} menuju {{ Str::title($travel[1]->name) }} atau pun sebaliknya dari
-                {{ Str::title($travel[1]->name) }} ke {{ Str::title($travel[0]->name) }}. Dijamin aman, cepat, nyaman,
-                dan
-                selamat sampai tujuan.
+                <a href="{{ route('beranda') }}">{{ Str::upper(env('APP_NAME')) }}</a> siap menemani perjalanan Anda dan
+                keluarga dengan layanan antar-jemput dari
+                {{ Str::title($travel[0]->name) }} menuju {{ Str::title($travel[1]->name) }} serta sebaliknya dari
+                {{ Str::title($travel[1]->name) }} ke {{ Str::title($travel[0]->name) }}. Kami mengutamakan keamanan,
+                kenyamanan, dan ketepatan waktu agar perjalanan Anda selalu menyenangkan dan sampai dengan selamat.
             </p>
-            <p>Memilih jasa travel harus selalu berhati-hati, anda sangat disarankan untuk
-                membayar biaya travel ketika sudah sampai di tujuan. Modus penipuan kini semakin merambat ke bidang jasa
-                travel
-                reguler. Banyak yang menjadi agen atau travel abal-abal dengan iming-iming harga murah.
+            <p>Saat memilih jasa travel, Anda perlu berhati-hati dan disarankan untuk melakukan pembayaran setelah tiba di
+                tujuan. Saat ini, modus penipuan semakin marak di sektor jasa travel reguler, dengan banyak agen atau travel
+                palsu yang menawarkan harga murah namun tidak dapat dipercaya.
             </p>
             {{-- H3 --}}
-            <h3>Harga Travel Murah</h3>
-            <p>Kami selalu menawarkan jasa travel dengan harga murah dan terjangkau. Bahkan anda bisa melakukan
-                negosiasi
-                dengan
-                admin langsung jika merasa tidak mampu. Segera hubungi kami untuk negosiasi biaya, kami siap membantu
-                anda.
+            <h3>Harga Tiket Travel Terjangkau</h3>
+            <p>
+                Kami menyediakan jasa travel dengan harga yang terjangkau dan ramah di kantong. Jika Anda merasa perlu, Anda
+                juga dapat langsung bernegosiasi dengan admin kami. Jangan ragu untuk menghubungi kami kapan saja, kami siap
+                membantu menemukan solusi biaya terbaik untuk Anda.
             </p>
             <p>
-                Biaya dari {{ Str::title($travel[0]->name) }} menuju {{ Str::title($travel[1]->name) }} bisa berubah
-                tergantung situasi. Pesan tiket travel
-                <strong>{{ $page }}</strong> 5 hari sebelum
-                berangkat agar dapat harga yang lebih murah. Jika
-                hari pemesanan dan hari keberangkatan dekat, maka harga mulai naik. Apalagi jika anda memesan tiket
-                travel
-                pada
-                hari raya besar.
+                Biaya perjalanan dari {{ Str::title($travel[0]->name) }} ke {{ Str::title($travel[1]->name) }} bersifat
+                dinamis dan dapat berubah sesuai kondisi. Untuk mendapatkan tarif terbaik, sebaiknya pesan tiket travel
+                melalui <strong>{{ $page }}</strong> paling lambat 1 hari sebelum keberangkatan. Jika memesan
+                terlalu dekat dengan jadwal keberangkatan, harga tiket cenderung meningkat, terutama saat momen hari raya
+                atau libur panjang.
             </p>
             {{-- H3 --}}
-            <h3>Pilihan Jadwal keberangkatan Banyak</h3>
-            <p>Setiap travel tentunya memiliki jadwal keberangkatan tersendiri. Kami juga memiliki jadwal sendiri,
-                keberangkatan setiap hari dengan jam-jam tertentu. Dimohon untuk sudah bersiap di titik penjemputan pada
-                jam
-                tersebut. Jika anda sudah membayar dan anda belum berada di titik penjemputan, maka uang anda akan
-                dikembalikan 50%. Jika driver telat menjemput anda, maka anda akan diantar dengan gratis, namun tidak
-                mendapat gratis makan. Berikut jadwal keberangkatan travel:
+            <h3>Jadwal Travel Sangat Responsif</h3>
+            <p>Setiap layanan travel memiliki jadwal keberangkatan yang berbeda-beda, begitu juga dengan kami. Kami melayani
+                keberangkatan setiap hari pada waktu-waktu tertentu. Harap pastikan Anda sudah siap di lokasi penjemputan
+                sesuai jadwal yang telah ditentukan. Apabila Anda telah melakukan pembayaran tetapi tidak berada di titik
+                penjemputan saat waktu jemput, kami hanya mengembalikan 50% dari biaya.
+            </p>
+            <p>
+                Namun, jika sopir terlambat
+                menjemput, Anda akan diantar tanpa biaya tambahan, meskipun fasilitas makan gratis tidak diberikan. Berikut
+                adalah jadwal keberangkatan kami:
             </p>
             {{-- TABLE --}}
             <div class="relative rounded-xl overflow-auto">
@@ -58,14 +53,23 @@
                             <tr
                                 class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
                                 <th class="!pl-8">
-                                    {{ Str::title($travel[0]->name) }}</th>
+                                    Dari {{ Str::title($travel[0]->name) }}</th>
                                 <th class="!pr-8">
-                                    {{ Str::title($travel[1]->name) }}</th>
+                                    Dari {{ Str::title($travel[1]->name) }}</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white">
                             @php
-                                $jadwal = [['05', '07'], ['10', '13'], ['15', '17'], ['20', '21']];
+                                $jadwal = [
+                                    ['06', '07'],
+                                    ['08', '10'],
+                                    ['11', '11'],
+                                    ['14', '13'],
+                                    ['15', '15'],
+                                    ['17', '18'],
+                                    ['19', '21'],
+                                    ['21', '22'],
+                                ];
                             @endphp
 
                             @foreach ($jadwal as $item)
@@ -80,56 +84,64 @@
                     </table>
                 </div>
             </div>
-            <p>Jadwal tersebut bisa berubah. Jika anda ingin berangkat sesuai jadwal yang diinginkan dan tidak tertera
-                di tabel, maka anda harus memesan carter kepada admin. Bisa sesuaikan jam dan hari keberangkatan.</p>
-            {{-- H3 --}}
-            <h3>Unit Mobil Lengkap</h3>
-            <p>Keselamatan dan kenyamanan dalam perjalanan menjadi prioritas kami. Kami akan berusaha sebaik mungkin
-                untuk
-                meningkatkannya. Setiap mobil yang kamu berangkat selalu dicuci dan di rawat untuk menjamin keselamatan.
-                Semua unit telah dilengkapi dengan fasilitas terbaik, seperti AC dan audio. Perjalanan anda semakin
-                nyaman
-                bersama {{ Str::upper(env('APP_NAME')) }}.
-            </p>
             <p>
-                Beberapa jenis mobil travel yang akan mengantar anda:
+                Jadwal keberangkatan dapat berubah sewaktu-waktu. Jika Anda ingin berangkat pada waktu yang tidak tercantum
+                dalam tabel, silahkan lakukan pemesanan carter langsung dengan admin. Waktu dan hari keberangkatan bisa
+                disesuaikan sesuai kebutuhan Anda.
+
+            </p>
+            {{-- H3 --}}
+            <h3>Armada/Mobil Travel Lengkap</h3>
+            <p>
+                Keselamatan dan kenyamanan Anda selama perjalanan adalah fokus utama kami. Kami selalu berupaya meningkatkan
+                kualitas layanan dengan merawat dan membersihkan setiap kendaraan secara rutin sebelum keberangkatan. Semua
+                armada kami dilengkapi dengan fasilitas unggulan, seperti AC dan sistem audio, agar perjalanan Anda bersama
+                {{ Str::upper(env('APP\_NAME')) }} terasa lebih nyaman dan menyenangkan.
+
+            </p>
+
+            <p>
+                Berikut adalah beberapa jenis armada/mobil travel yang akan menemani perjalanan Anda:
             </p>
             <ul>
-                <li>Hiace Commuter 14 Kursi</li>
-                <li>Hiace Commuter Semi Luxury 10 Kursi</li>
-                <li>Hiace Commuter Luxury 8 Kursi</li>
-                <li>Hiace Premio 14 Kursi</li>
-                <li>Hiace Premio Semi Luxury 10 Kursi</li>
-                <li>Hiace Premio Luxury 8 Kursi</li>
-                <li>Alphard/Vellfire</li>
+                <li>Mini Bus</li>
+                <li>Elf Long</li>
+                <li>Hiace Commuter</li>
+                <li>Hiace Premio</li>
                 <li>Innova Reborn</li>
                 <li>Innova Grand New</li>
                 <li>Avanza New</li>
+                <li>Calya</li>
                 <li>Xenia</li>
-                <li>Expander</li>
-                <li>Hyundai Stargazer</li>
             </ul>
             <p>
-                Tapi jika anda memesan carter, anda bisa memilih:
+                Mobil yang telah kami sebutkan tidak bisa dipilih jika menggunakan layanan travel reguler. Tapi jika anda
+                memesan carter drop atau carter pulang pergi (pp), maka anda bisa memilih mobil/armada yang tersedia:
             </p>
-            <ul>
-                <li>Fortuner</li>
-                <li>Pajero</li>
-                <li>Mercedes-Benz</li>
-                <li>Land Cruiser</li>
-            </ul>
-            <p>Cukup menarik bukan? Ayo segera pesan travel anda!</p>
+            <iframe class="w-full h-auto aspect-video mb-3"
+                src="https://www.youtube.com/embed/JkQtbMABGUo?si=Yjw3V54n_MqENcZ9&autoplay=1" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p>
+                Menarik banget, kan? Yuk, segera pesan travel kamu sekarang juga dan nikmati perjalanan yang nyaman!
+            </p>
             {{-- H3 --}}
-            <h3>Rute Travel Lengkap</h3>
-            <p>Perlu anda ketahui bahwa kami melayani travel seluruh Indonesia, terutama pada rute
-                <strong>{{ $page }}</strong>. Dengan begitu
-                kami memiliki banyak <a href="{{ route('arsip-travel') }}">rute travel</a> yang akan membantu anda.
-                Selain
-                itu, kami juga
-                memiliki agen travel di seluruh Indonesia. Baik itu dalam setiap provinsi, kota, kabupaten, hingga
-                kecamatan.
+            <h3>Rute Travel Lengkap yang kami layani:</h3>
+            <p>
+                Kami menyediakan layanan travel ke seluruh penjuru Indonesia, dengan fokus utama pada rute
+                <strong>{{ $page }}</strong>. Tersedia berbagai pilihan <a href="{{ route('arsip-travel') }}">rute
+                    travel</a> yang dapat memudahkan perjalanan Anda. Jaringan agen kami pun tersebar luas, mulai dari
+                tingkat provinsi, kota, kabupaten, hingga kecamatan di seluruh Pulau Sumatera, Jawa, hingga Bali. Kami siap
+                melayani kebutuhan transportasi Anda di mana saja.
+
             </p>
-            <p>Ada beberapa rute travel yang kami rekomendasikan untuk anda, dan mungkin anda tertarik:</p>
+            <p>
+                Berikut beberapa rute travel pilihan yang kami rekomendasikan untuk Anda, yang mungkin sesuai dengan
+                kebutuhan perjalanan Anda:
+
+            </p>
             <ul>
                 @foreach ($recommendation as $item)
                     <li>
@@ -139,119 +151,108 @@
                 @endforeach
             </ul>
             {{-- H2 --}}
-            <h2>Kelebihan {{ $page }} PP</h2>
+            <h2>Kelebihan Menggunakan {{ $page }} PP</h2>
             <p>
-                Kami menawarkan jasa travel dengan memperhatikan kepuasan pelanggan. Kami membantu anda 24 jam untuk
-                melakukan travel kemana pun di seluruh Indonesia. Berikut kelebihan kami sebagai jasa travel yang akan
-                mengantar anda:
+                Kami menyediakan layanan travel dengan fokus utama pada kepuasan pelanggan. Siap melayani Anda 24 jam sehari
+                untuk perjalanan ke berbagai daerah di seluruh Indonesia. Berikut ini beberapa keunggulan yang membuat jasa
+                travel kami menjadi pilihan terbaik untuk perjalanan Anda:
             </p>
             <ul>
-                <li>Harga murah, terjangkau, dan bisa negosiasi,</li>
-                <li>Pembayaran di akhir setelah anda tiba di lokasi tujuan,</li>
-                <li>Bisa melakukan pembatalan, pengembalian ulang, dan perubahan jadwal,</li>
-                <li>Anda akan dijemput dirumah,</li>
-                <li>Tersedia carter drop dan carter pp,</li>
-                <li>Semua unit bersih dan memiliki AC,</li>
-                <li>Travel reguler 24 jam,</li>
-                <li>Travel door to door dan pulang pergi,</li>
-                <li>Cepat karena Via tol,</li>
-                <li>Bonus makan dan minum.</li>
+
+                <li>Tarif terjangkau dengan opsi negosiasi harga,</li>
+                <li>Pembayaran dilakukan setelah Anda sampai di tujuan,</li>
+                <li>Fleksibel dengan layanan pembatalan, pengembalian, dan perubahan jadwal,</li>
+                <li>Penjemputan langsung dari rumah Anda,</li>
+                <li>Tersedia layanan carter sekali jalan maupun pulang-pergi,</li>
+                <li>Kendaraan selalu bersih dan dilengkapi AC,</li>
+                <li>Layanan travel reguler selama 24 jam,</li>
+                <li>Sistem door-to-door untuk keberangkatan dan pulang,</li>
+                <li>Perjalanan lebih cepat melalui jalur tol,</li>
+                <li>Gratis bonus makan dan minuman.</li>
+
+
             </ul>
             {{-- H2 --}}
-            <h2>Cara Pesan Travel</h2>
-            <p>Pemesanan {{ $page }} dijamin sangat mudah (anti
-                ribet pokoknya). Anda tidak wajib datang ke garasi kami, bisa
-                dengan langsung memesan secara online. Pemesanan online dibuka 24 jam via kontak whatsapp pada nomor
-                {{ phone() }}. Pesan travel via online hanya melayani chat saja, jangan memanggil sembarangan.
+            <h2>Cara Mudah Memesan Travel</h2>
+            <p>
+                Proses pemesanan {{ $page }} sangat praktis dan tanpa ribet. Anda tidak perlu datang langsung ke
+                garasi; cukup pesan secara online. Layanan pemesanan online kami aktif 24 jam melalui WhatsApp di nomor
+                {{ phone() }}. Mohon untuk hanya mengirim pesan chat dan tidak melakukan panggilan suara sembarangan.
+
             </p>
-            <p>Untuk alur pemesanan travel online sebagai berikut:</p>
+            <p>Berikut adalah langkah-langkah pemesanan travel secara online: </p>
             <ul>
-                <li>Pilih rute anda pada web kami,</li>
-                <li>Klik logo whatsapp untuk memulai chat,</li>
-                <li>Isi data penumpang seperti nama, jenis kelamin, alamat, tujuan, dan barang bawaan,</li>
-                <li>Negosiasi harga dengan admin,</li>
-                <li>Anda tinggal menunggu jadwal keberangkatan travel.</li>
-            </ul>
-            <p>Promo travel selalu tersedia setiap minggu. Kami memberikan diskon s/d 20% per orang. Berikut trik
-                mendapatkan promonya, pesan travel pada pagi hari sebelum jam 9, lalu ketika memesan jangan lupa bagikan
-                pesanan anda ke sosial media, setelah itu berikan bukti screenshoot kepada kami. Dengan begitu anda bisa
-                mengklaim diskon tersebut.
-            </p>
-            {{-- H2 --}}
-            <h2>Rekomendasi Agen {{ $page }}</h2>
-            <p>
-                Apakah anda sedang mencari agen {{ Str::title('Travel ' . $travel[0]->name) }}
-                atau agen
-                {{ Str::title('Travel ' . $travel[1]->name) }} terbaik di Indonesia. Jangan khawatir! Kami akan
-                siap membantu anda mencari agen travel terpercaya. Siap mengantar anda dengan selamat.
-            </p>
-            <p>
-                Setiap agen yang kami rekomendasikan selalu amanah, kami jamin 100%. Berikut 8 rekomendasi agen travel
-                terpercaya:
-            </p>
-            <ul class="[&>li]:font-semibold [&>li>ul]:font-normal">
-                <li>{{ Str::title($travel[0]->name) }}
-                    <ul class="!list-decimal">
-                        <li>{{ env('APP_NAME') }} (kami)</li>
-                        <li><a href="https://mumpunitransjava.com/" target="_blank">Mumpuni Trans Java</a></li>
-                        <li>Seraya Trans {{ Str::title($travel[0]->name) }}</li>
-                        <li>LNT Trans</li>
-                        <li>Agung Group Travel</li>
-                    </ul>
+                <li>Pilih rute perjalanan Anda melalui website kami,</li>
+                <li>Klik ikon WhatsApp untuk mulai menghubungi admin,</li>
+                <li>Isi data penumpang seperti nama, jenis kelamin, alamat penjemputan, tujuan, dan detail barang bawaan,
                 </li>
-                <li>{{ Str::title($travel[1]->name) }}
-                    <ul class="!list-decimal">
-                        <li>{{ env('APP_NAME') }} (kami)</li>
-                        <li>Ratu Abadi {{ Str::title($travel[1]->name) }}</li>
-                        <li>Safania Trans & Travel</li>
-                        <li>Buaya Darat Tour</li>
-                        <li>Galaxy Sejahtera</li>
-                    </ul>
-                </li>
+                <li>Lakukan negosiasi harga jika diperlukan,</li>
+                <li>Tunggu jadwal keberangkatan sesuai informasi yang diberikan oleh admin.</li>
+
             </ul>
             <p>
-                Setiap agen tersebut sudah berpengalaman pada rutenya. Tidak perlu khawatir dijamin aman dan selamat.
+                Kami selalu menghadirkan promo menarik setiap minggu! Dapatkan diskon hingga 20% per orang.
+
+                Berikut trik untuk mendapatkan promo tersebut:
+            <ul>
+                <li>Lakukan pemesanan travel di pagi hari sebelum jam 09.00,</li>
+                <li>Bagikan pesanan Anda ke media sosial (Instagram, Facebook, dll),</li>
+                <li>Kirimkan bukti screenshot kepada admin kami melalui WhatsApp.</li>
+
+            </ul>
+
+            Dengan langkah tersebut, Anda langsung berhak mengklaim diskon spesial dari kami!
             </p>
             {{-- H2 --}}
-            <h2>Tips Melakukan Perjalanan Travel</h2>
+            <h2>Rekomendasi Jasa {{ $page }}</h2>
             <p>
-                Perjalanan travel pada umumnya sangat jauh dan lama, terutama
-                {{ $page }}. Travel biasanya difokuskan untuk
-                perjalanan
-                keluar
-                kota, seperti dari {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} atau sebaliknya dari
-                {{ Str::title($travel[1]->name . ' ke ' . $travel[0]->name) }}. Bahkan banyak yang menggunakannya untuk
-                keluar provinsi dan pulau. Sudah pasti perjalanannya berjam-jam.
+                Sedang mencari jasa {{ Str::title('Travel ' . $travel[0]->name) }} atau
+                {{ Str::title('Travel ' . $travel[1]->name) }} terbaik di Indonesia? Tenang, Anda berada di tempat yang
+                tepat! {{ Str::upper(env('APP_NAME')) }} siap membantu Anda menemukan agen travel terpercaya yang akan
+                mengantar Anda dengan aman dan nyaman sampai tujuan.
+
             </p>
             <p>
-                Anda harus mempersiapkan banyak hal agar anda tetap dalam keadaan sehat dan sampai ke tujuan dengan
-                keadaan
-                normal. Berikut tipsnya:
+                Setiap layanan travel tentu memiliki keunggulan dan kekurangan tersendiri. Oleh karena itu, penting bagi
+                Anda untuk memilih jasa travel yang paling sesuai dengan kebutuhan perjalanan Anda, baik dari segi harga,
+                fasilitas, kenyamanan, maupun keamanannya.
+            </p>
+            {{-- H2 --}}
+            <h2>Tips travel agar lebih nyaman dan aman</h2>
+            <p>
+                Perjalanan dengan jasa travel umumnya menempuh jarak jauh dan memerlukan waktu yang tidak sebentar, terutama
+                pada rute yang satu ini. Layanan ini biasanya digunakan untuk mobilitas antar kota, seperti dari
+                {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} maupun sebaliknya,
+                {{ Str::title($travel[1]->name . ' ke ' . $travel[0]->name) }}. Bahkan, banyak penumpang memanfaatkan
+                travel untuk bepergian antar provinsi hingga lintas pulau, sehingga durasi perjalanan bisa mencapai beberapa
+                jam atau lebih.
+
+            </p>
+            <p>
+                Agar tetap sehat dan bugar selama perjalanan serta tiba di tujuan dengan kondisi prima, ada beberapa hal
+                yang perlu Anda persiapkan. Berikut tips yang bisa Anda ikuti:
             </p>
             <ul>
-                <li>Jadwalkan travel jauh-jauh hari agar anda bisa bersiap-siap,</li>
-                <li>Selalu jaga kesehatan tubuh anda,</li>
-                <li>Siapkan obat-obatan pribadi jika anda sakit, dan bawa obat anti mabuk jika mabuk darat/laut,</li>
-                <li>Merapikan semua barang bawaan anda dalam koper atau kardus,</li>
-                <li>Pilih posisi duduk yang nyaman menurut anda,</li>
-                <li>Bawa makan, minum, dan jajan jika anda merasa makanan yang diberikan oleh petugas kurang.</li>
+                <li>Pesan tiket jauh-jauh hari untuk mendapatkan harga terbaik dan memastikan ketersediaan tempat duduk.
+                </li>
+                <li>Konfirmasi ulang jadwal keberangkatan dan titik penjemputan kepada admin sebelum hari H.</li>
+                <li>Siapkan identitas diri dan data lengkap saat memesan, seperti nama, alamat jemput, dan nomor yang bisa
+                    dihubungi.</li>
+                <li>Bawa barang seperlunya dan hindari membawa bawaan berlebihan agar perjalanan lebih nyaman.</li>
+                <li>Datang lebih awal ke lokasi penjemputan untuk menghindari keterlambatan.</li>
+                <li>Pastikan HP Anda aktif selama perjalanan agar mudah dihubungi oleh sopir atau pihak travel.</li>
+                <li>Jaga kebersihan dan kenyamanan bersama selama di dalam kendaraan.</li>
+                <li>Jika ada perubahan jadwal, segera hubungi admin untuk penyesuaian.</li>
             </ul>
+
             {{-- H2 --}}
             <h2>Kesimpulan</h2>
-            <iframe class="w-full h-auto aspect-video mb-3"
-                src="https://www.youtube.com/embed/JkQtbMABGUo?si=Yjw3V54n_MqENcZ9&autoplay=1" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+
             <p>
-                Kami menawarkan anda jasa travel murah dengan banyak kelebihan, seperti harga murah dan fasilitas
-                menarik.
-                Banyak pilihan mobil dan jadwal keberangkatan. Pemesanan travel yang mudah dan fleksibel. Lalu tunggu
-                apa
-                lagi? Ayo segera jadwalkan perjalanan
-                <strong>{{ $page }}</strong> untuk besok,
-                tanggal {{ \Carbon\Carbon::now()->addDay(5)->locale('id')->isoFormat('D MMMM YYYY') }}.
+                Kami menghadirkan layanan travel dengan harga terjangkau dan berbagai keunggulan, mulai dari pilihan armada
+                yang beragam hingga jadwal keberangkatan yang fleksibel. Proses pemesanan juga sangat mudah dan praktis.
+                Jadi, tunggu apa lagi? Segera atur perjalanan Anda ke <strong>{{ $page }}</strong> untuk tanggal
+                {{ \Carbon\Carbon::now()->addDay(5)->locale('id')->isoFormat('D MMMM YYYY') }}!
             </p>
         </x-layouts.article-left>
 

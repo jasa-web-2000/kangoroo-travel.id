@@ -1,7 +1,7 @@
 <section class="py-24 __container">
     <div class="w-full rounded-3xl overflow-hidden">
         <x-background-blue>
-        <div class="p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
+            <div class="p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
                 <div class="max-w-2xl mx-auto">
                     <h2 class="text-white !text-4xl">
                         Apakah anda ingin perjalanan travel yang aman dan cepat?
@@ -13,11 +13,11 @@
                 </div>
                 <div class="flex justify-center gap-4 mt-8 sm:flex-row sm:items-center sm:gap-5">
                     <a href="{{ whatsapp() }}"
-                        class="flex gap-2 px-5 py-2 border-2 border-slate-200 hover:border-blue-500 bg-white hover:bg-blue-500 text-slate-700 hover:text-slate-200 rounded-lg w-min top-0 hover:top-2 transition-all duration-700 relative">
+                        class="flex gap-2 px-5 py-2 border-2 border-slate-200 hover:border-yellow-500 bg-white hover:bg-yellow-500 text-slate-700 hover:text-slate-200 rounded-lg w-min top-0 hover:top-2 transition-all duration-700 relative">
                         Pesan
                     </a>
-                    <a href="#rute-travel"
-                        class="flex gap-2 px-5 py-2 border-2 border-slate-200 hover:border-blue-500 bg-transparent hover:bg-blue-500 text-slate-200 hover:text-slate-200 rounded-lg w-min top-0 hover:top-2 transition-all duration-700 relative">
+                    <a href="{{ route('arsip-travel') }}"
+                        class="flex gap-2 px-5 py-2 border-2 border-slate-200 hover:border-yellow-500 bg-transparent hover:bg-yellow-500 text-slate-200 hover:text-slate-200 rounded-lg w-min top-0 hover:top-2 transition-all duration-700 relative">
                         Rute
                     </a>
                 </div>
