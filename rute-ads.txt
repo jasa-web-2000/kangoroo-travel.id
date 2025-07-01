@@ -338,7 +338,7 @@ Travel Karawang Indramayu
 Travel Indramayu Karawang
 
 Travel Karawang Cirebon 
-Travel Cirebon  Karawang
+Travel Cirebon Karawang
 
 Travel Karawang Brebes 
 Travel Brebes Karawang
