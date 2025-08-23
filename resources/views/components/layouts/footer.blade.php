@@ -26,7 +26,8 @@
             <div class="grid grid-cols-8 gap-x-5 gap-y-7">
                 <div class="col-span-12 md:col-span-4">
                     <x-logo :light="true" />
-                    <p class="max-w-[550px] md:max-w-80 mt-3">Jadwalkan travel anda segera! Kami siap melayani anda ke Seluruh Pulau Sumatera, Jawa, dan Bali.</p>
+                    <p class="max-w-[550px] md:max-w-80 mt-3">Jadwalkan travel anda segera! Kami siap melayani anda ke
+                        Seluruh Pulau Sumatera, Jawa, dan Bali.</p>
                 </div>
                 <div class="col-span-8 sm:col-span-4 md:col-span-2">
                     <h3 class="text-white font-bold tracking-wider">Laman</h3>
@@ -46,7 +47,8 @@
 
             <div class="text-center py-5 mt-10 text-sm border-t border-yellow-400">
                 Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex"
-                    href="https://{{ developer() }}">{{ developer() }}</a><br>Juni 2025 - {{ \Carbon\Carbon::now()->locale('id')->isoFormat('MMMM YYYY') }}
+                    href="{{ developer()['url'] }}">{{ developer()['name'] }}</a><br>2018 -
+                {{ \Carbon\Carbon::now()->locale('id')->isoFormat('YYYY') }}
             </div>
         </div>
     </x-background-blue>

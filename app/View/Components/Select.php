@@ -2,6 +2,9 @@
 
 namespace App\View\Components;
 
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\DistrictController;
+use App\Http\Controllers\ProvinceController;
 use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
@@ -16,7 +19,8 @@ class Select extends Component
      * Create a new component instance.
      */
 
-    public Collection $area;
+    public $area = null;
+
     public function __construct(
         public string $title,
         public string $model,
@@ -27,20 +31,24 @@ class Select extends Component
 
         switch ($model) {
             case 'Province':
-                $this->area = Province::orderBy('name', 'asc')->get();
+                $this->area = ProvinceController::all()
+                    ->sortBy('name');
+
                 break;
             case 'City':
-                $this->area = City::orderBy('name', 'asc')
-                    ->where('province_code', $this->whereId)
-                    ->get();
+                $this->area = CityController::all()
+                    ->sortBy('name')
+                    ->where('province_id', $this->whereId);
+
                 break;
             case 'District':
-                $this->area = District::orderBy('name', 'asc')
-                    ->where('city_code', $this->whereId)
-                    ->get();
+                $this->area = DistrictController::all()
+                    ->sortBy('name')
+                    ->where('regency_id', $this->whereId);
+
                 break;
             default:
-                $this->area = new Collection();
+                $this->area = null;
                 break;
         }
     }

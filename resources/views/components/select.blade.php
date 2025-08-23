@@ -5,7 +5,7 @@
         <option value="">Pilih {{ $title }}</option>
 
         @forelse ($area as $item)
-            <option value={{ $item->code }}>{{ Str::title($item->name) }}</option>
+            <option value={{ $item['id'] }}>{{ Str::title($item['name']) }}</option>
         @empty
             <option value="" disabled>Tidak Ada Data</option>
         @endforelse

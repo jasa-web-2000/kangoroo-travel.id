@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Laravolt\Indonesia\Models\City;
-use Laravolt\Indonesia\Models\District;
-use Laravolt\Indonesia\Models\Province;
 
 class SitemapController extends Controller
 {
     public function all_data()
     {
-        $province = collect(Province::all());
-        $city = collect(City::all());
-        $district = collect(District::all());
+        $province = ProvinceController::all();
+        $city = CityController::all();
+        $district = DistrictController::all();
         $data = $province->merge($city)->merge($district);
 
         return $data;
@@ -57,8 +53,8 @@ class SitemapController extends Controller
 
         $res = $data->map(function ($item) {
             return route('agen-travel', [
-                'asal' => Str::slug($item->name),
-                'asalId' => $item->code,
+                'asal' => Str::slug($item['name']),
+                'asalId' => $item['id'],
             ]);
         });
 
@@ -73,8 +69,8 @@ class SitemapController extends Controller
 
         $res = $data->map(function ($item) {
             return route('single-travel-sitemap', [
-                'asal' => Str::slug($item->name),
-                'asalId' => $item->code,
+                'asal' => Str::slug($item['name']),
+                'asalId' => $item['id'],
             ]);
         });
 
@@ -87,13 +83,13 @@ class SitemapController extends Controller
         $data = $this->all_data();
 
         $res = $data->filter(function ($item) use ($asalId) {
-            return $asalId != $item->code;
+            return $asalId != $item['id'];
         })->values()->map(function ($item) use ($asal, $asalId) {
             return route('jalur-rute-travel', [
                 'asal' => $asal,
                 'asalId' => $asalId,
-                'tujuan' => Str::slug($item->name),
-                'tujuanId' => $item->code,
+                'tujuan' => Str::slug($item['name']),
+                'tujuanId' => $item['id'],
             ]);
         });
 

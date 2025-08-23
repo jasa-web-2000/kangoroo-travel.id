@@ -75,6 +75,7 @@
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault()
 
+            const appName = '{{ env('APP_NAME') }}';
             const telp = '{{ phone() }}';
             const telpResult = telp.replace(/\D/g, '')
 
@@ -101,7 +102,7 @@
             }
 
             const text =
-                `FORM Reservasi *Arman Trans*%0A%0ASaya ingin memesan travel!%0A*Nama* : ${data.nama}%0A*Penjemputan* : ${data.penjemputan}%0A*Pengantaran* : ${data.pengantaran}%0A*Jadwal* : ${data.jadwal}%0A*Jumlah PNP* : ${data.penumpang} orang%0A*Catatan / Bawaan* : ${data.catatan}%0A%0A{{ env('APP_URL') }}`
+                `FORM Reservasi *${appName}*%0A%0ASaya ingin memesan travel!%0A*Nama* : ${data.nama}%0A*Penjemputan* : ${data.penjemputan}%0A*Pengantaran* : ${data.pengantaran}%0A*Jadwal* : ${data.jadwal}%0A*Jumlah PNP* : ${data.penumpang} orang%0A*Catatan / Bawaan* : ${data.catatan}%0A%0A{{ env('APP_URL') }}`
 
             window.open(`https://wa.me/${telpResult}/?text=${text}`, '_blank')
 

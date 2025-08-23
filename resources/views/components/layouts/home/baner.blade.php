@@ -3,8 +3,9 @@
         style="background: url({{ asset('img/bg-baner.png') }}) ">
     </div>
     <div class="text-center z-[3] px-2">
-        <h1 class="!text-white mb-2">{{ config('app.name') . ' - Travel Murah ' . date('Y') }}</h1>
-        <p class="text-slate-200 mb-7 max-w-[450px] mx-auto">{{ config('app.name') }} akan membantu merencanakan travel anda dengan aman, nyaman, dan harga murah!</p>
+        <h1 class="!text-white mb-2">{{ config('app.name')}}</h1>
+        <p class="text-slate-200 mb-7 max-w-[450px] mx-auto">{{ config('app.name') }} menawarkan Travel seluruh Jawa
+            dengan rute utama {{ tagline() }} dengan aman, nyaman, dan harga murah!</p>
     </div>
     <div class="w-full !z-[2] px-5">
         <div class="container mx-auto flex justify-center items-center {{-- last:[&>*]:hidden --}}">

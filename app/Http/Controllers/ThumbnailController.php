@@ -21,11 +21,19 @@ class ThumbnailController extends Controller
         foreach ($lines as $key => $item) {
             $image->text($item, [
                 'color' => '#fff',
-                'size' => 90,
+                'size' => 100,
                 'yOffset' => -150 + ($key * 120),
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
+
+
+        $image->text(phone(), [
+            'color' => '#000',
+            'size' => 65,
+            'yOffset' => 305,
+            'fontFile' => public_path('font/Poppins-Regular.ttf'),
+        ]);
 
         $imageData = $image->toDataUri(null, 15);
 
