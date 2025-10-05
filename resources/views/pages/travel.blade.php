@@ -1,5 +1,13 @@
 @extends('app')
 @section('content')
+    @php
+
+        $asal = Str::slug($travel[0]['name']);
+        $asalId = $travel[0]['id'];
+        $tujuan = Str::slug($travel[1]['name']);
+        $tujuanId = $travel[1]['id'];
+    @endphp
+
     <x-default-baner :title="$page . ' PP Murah ' . date('Y')" :desc="$desc . '.'" />
     <x-layouts.article-section>
         {{-- left --}}
@@ -124,10 +132,11 @@
             </p>
 
             <h3>Sistem Door to Door</h3>
-
             <p>
                 Terlalu ribet jika berangkat harus datang ke garasi travel. Tenang
-                saja kami kini memberikan <strong>{{ $page }}</strong> dengan sistem
+                saja kami kini memberikan <strong><a target="_blank" title="{{ $page }}"
+                        href="https://traveljawa.web.id/travel/dari-{{ $asal }}/ke-{{ $tujuan }}/{{ $asalId }}/{{ $tujuanId }}"><strong>{{ $page }}</strong>
+                    </a></strong> dengan sistem
                 door to door. Kami akan jemput pelanggan langsung dari pintu ke
                 pintu. Anda tidak akan diminta tambahan biaya oleh driver. yang
                 penting anda telah negosiasikan harga kepada admin ketika melakukan
@@ -208,7 +217,11 @@
             </p>
 
             <p>
-                Tapi, jika anda memesan carter pada travel {{ Str::title($travel[1]['name']) }}, anda
+                Tapi, jika anda memesan carter pada <a target="_blank" title="Travel {{ $travel[1]['name'] }} {{ $travel[0]['name'] }}"
+                    href="https://traveljawa.web.id/travel/dari-{{ $tujuan }}/ke-{{ $asal }}/{{ $tujuanId }}/{{ $asalId }}"><strong>
+                        Travel {{ $travel[1]['name'] }} {{ $travel[0]['name'] }}
+                    </strong>
+                </a>, anda
                 bisa memilih jam keberangkatan kapan saja yang anda mau. Carter
                 hampir mirip seperti rental mobil plus driver. Jadi semua kebutuhan
                 anda akan kami sanggupi.

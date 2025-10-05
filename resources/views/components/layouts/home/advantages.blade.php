@@ -36,7 +36,9 @@
                         Harga Murah
                     </dt>
                     <dd>
-                        Kami menawarkan travel atau carter dengan harga murah dan terjangkau, bahkan anda bisa negosiasi. 
+                        Kami menawarkan <a class="underline" href="https://jasatravel.web.id" title="Jasa Travel"
+                            target="_blank">jasa
+                            travel</a> atau carter dengan harga murah dan terjangkau, bahkan anda bisa negosiasi.
                     </dd>
                 </div>
 
@@ -55,7 +57,8 @@
                         Rute Lengkap
                     </dt>
                     <dd>
-                        Anda bisa merencanakan perjalanan kemana saja dan kapan saja, kami menjangkau seluruh daerah di Sumatera, Jawa, dan Bali.
+                        Anda bisa merencanakan perjalanan kemana saja dan kapan saja, kami menjangkau seluruh daerah di
+                        Sumatera, Jawa, dan Bali.
                     </dd>
                 </div>
 
@@ -73,7 +76,8 @@
                         Dijamin Puas
                     </dt>
                     <dd>
-                        Kami selalu mengutamakan kepuasan pelanggan, baik ketika melakukan perjalanan maupun ketika melakukan pemesanan tiket.
+                        Kami selalu mengutamakan kepuasan pelanggan, baik ketika melakukan perjalanan maupun ketika
+                        melakukan pemesanan tiket.
                     </dd>
                 </div>
             </dl>
