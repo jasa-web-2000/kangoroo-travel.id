@@ -7,7 +7,13 @@
         @livewire('select-area', ['label' => 'Tujuan'])
     </div>
     <div class="[&>*]:w-full [&_span]:mx-auto">
-        <x-button text="Cari Travel" :submit="true" class="relative z-[1]" :transparant="false" />
+        @if (Route::currentRouteName() == 'beranda')
+            <a href="{{ whatsapp() }}" id="tombol-cari-travel"
+                class="px-3 py-1.5 rounded-md group border border-yellow-600 bg-yellow-700 hover:bg-transparent text-slate-100 hover:text-yellow-700 shadow-lg transform active:scale-y-95 transition-transform flex items-center relative z-[1]"><span>Pesan
+                    Travel</span></a>
+        @else
+            <x-button text="Cari Travel" :submit="true" class="relative z-[1]" :transparant="false" />
+        @endif
     </div>
     {{-- <a href="{{ Route::currentRouteName() == 'beranda' ? '#!' : route('arsip-agen') }}" id="tombol-cari-travel"
         class="text-sm underline text-blue-600 text-right">Cari agen?</a> --}}
