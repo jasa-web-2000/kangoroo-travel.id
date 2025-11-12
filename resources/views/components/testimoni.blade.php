@@ -1,4 +1,4 @@
-<div class="{{ $className ?? '' }}">
+<div class="{{ $className ?? '' }}" id="testimoni">
     <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 md:px-14 rounded-2xl md:py-14 ">
         {{-- <p class="text-base leading-normal"></p> --}}
 
