@@ -5,7 +5,7 @@
     <div class="text-center z-[3] px-2">
         <h1 class="!text-white mb-2">{{ config('app.name')}}</h1>
         <p class="text-slate-200 mb-7 max-w-[450px] mx-auto">{{ config('app.name') }} menawarkan Travel seluruh Jawa
-            dengan rute utama {{ tagline() }} dengan aman, nyaman, dan harga murah!</p>
+            dengan dengan aman, nyaman, dan harga murah! Ayo pesan travel anda sekarang juga!</p>
     </div>
     <div class="w-full !z-[2] px-5">
         <div class="container mx-auto flex justify-center items-center {{-- last:[&>*]:hidden --}}">
